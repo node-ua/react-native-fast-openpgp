@@ -54,8 +54,8 @@ export default class OpenPGP {
   static encrypt(message: string, publicKey: string): Promise<string> {
     return RNFastOpenPGP.encrypt(message, publicKey);
   }
-  static encryptWithMultipleKeys(message: string, publicKeys: Array<string>): Promise<string> {
-    return RNFastOpenPGP.encryptWithMultipleKeys(message, publicKeys);
+  static encryptWithMultipleKeys(message: string, keys: Array<string>): Promise<string> {
+    return RNFastOpenPGP.encryptWithMultipleKeys(message, JSON.stringify(keys));
   }
   static sign(
     message: string,
