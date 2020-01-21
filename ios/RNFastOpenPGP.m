@@ -61,6 +61,23 @@
 
 RCT_EXPORT_MODULE()
 
+RCT_REMAP_METHOD(getKeyId,
+                 publicKey: (NSString *)publicKey
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+   
+    NSError *error;
+    NSString * output = [OpenpgpNewFastOpenPGP() encrypt:message publicKey:publicKey error:&error];
+    
+    if(error!=nil){
+        reject([NSString stringWithFormat:@"%ld",[error code]], [error description],error);
+    }else{
+        resolve(output);
+    }
+    
+}
+
 RCT_REMAP_METHOD(encrypt,
                  encryptWith: (NSString *)message
                  publicKey: (NSString *)publicKey
