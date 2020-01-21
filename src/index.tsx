@@ -41,8 +41,8 @@ export interface KeyPair {
 }
 
 export default class OpenPGP {
-  static getKeyId(privateKey: string): Promise<string> {
-    return RNFastOpenPGP.getKeyId(privateKey);
+  static getKeyId(keys: string): Promise<string> {
+    return RNFastOpenPGP.getKeyId(keys);
   }
   static decrypt(
     message: string,
