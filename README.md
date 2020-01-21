@@ -2,16 +2,16 @@
 
 ## Getting started
 
-`$ npm install react-native-fast-openpgp --save`
+`$ npm install nodeua/react-native-fast-openpgp --save`
 
 ## Mostly automatic installation
 
-`$ react-native link react-native-fast-openpgp`
+`$ react-native link nodeua/react-native-fast-openpgp
 
 on `iOS` is required to add this line to `Podfile`
 
 ```ruby
-pod 'FastOpenpgp', :path => '../node_modules/react-native-fast-openpgp/ios/native'
+pod 'FastOpenpgp', :path => '../node_modules/nodeua/react-native-fast-openpgp/ios/native'
 ```
 
 and then Run `pod install`
@@ -26,7 +26,7 @@ and then Run `pod install`
 4. In `Podfile` add
 
 ```ruby
-pod 'FastOpenpgp', :path => '../node_modules/react-native-fast-openpgp/ios/native'
+pod 'FastOpenpgp', :path => '../node_modules/nodeua/react-native-fast-openpgp/ios/native'
 ```
 
 5. Run `pod install`
@@ -98,4 +98,5 @@ https://github.com/jerson/react-native-fast-openpgp-sample
 
 the native library is made in Golang and build with gomobile for faster performance
 
+https://github.com/node-ua/openpgp-mobile
 https://github.com/jerson/openpgp-mobile

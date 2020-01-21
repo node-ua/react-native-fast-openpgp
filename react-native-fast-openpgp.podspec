@@ -4,7 +4,7 @@ require 'json'
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 Pod::Spec.new do |s|
-  s.name         = package['name']
+  s.name         = "react-native-fast-openpgp"
   s.version      = package['version']
   s.summary      = package['description']
   s.license      = package['license']
